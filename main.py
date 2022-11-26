@@ -90,5 +90,6 @@ def start_training(character: Character):
           'Если не хочешь тренироваться, введи команду skip.')
     while cmd != 'skip':
         cmd = input('Введи команду: ')
-        print(commands[cmd])
+        if cmd in commands:
+            print(commands[cmd])
     return ('Тренировка завершена!')
